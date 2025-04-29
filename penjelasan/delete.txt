@@ -1,0 +1,63 @@
+Penjelasan Kode Hapus Produk
+
+Include file konfigurasi:
+
+require_once 'config.php'; untuk koneksi database dan fungsi bantu (sanitize, dll).
+
+
+Hapus 1 produk jika ada parameter id di URL:
+
+Cek isset($_GET['id']).
+
+Ambil id dari URL dan sanitasi (sanitize($_GET['id'])).
+
+Jalankan query DELETE FROM products WHERE id = $id.
+
+
+
+
+---
+
+Hapus banyak produk jika ada parameter ids di URL:
+
+Cek isset($_GET['ids']).
+
+Contoh data awal: $_GET['ids'] = "34,55,66".
+
+Proses parsing:
+
+1. explode(',', $_GET['ids']) => Ubah jadi array: [34, 55, 66].
+
+
+2. array_map('intval', $ids) => Pastikan semua elemen array jadi integer untuk keamanan.
+
+
+3. implode(',', $ids) => Gabungkan kembali ke string: "34,55,66".
+
+
+
+Hapus gambar terkait:
+
+Query SELECT gambar FROM products WHERE id IN ($ids).
+
+Loop hasilnya:
+
+Jika file gambar ada (file_exists()), hapus file tersebut dengan unlink().
+
+
+
+Hapus data produk di database:
+
+Query DELETE FROM products WHERE id IN ($ids).
+
+
+
+
+
+---
+
+Setelah selesai, redirect:
+
+header('Location: dashboard.php');
+
+exit();

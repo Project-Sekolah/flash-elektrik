@@ -1,0 +1,55 @@
+</main>:
+1. Menutup tag <main>, bagian utama konten halaman.
+
+Footer:
+<footer class="bg-dark text-white p-3 mt-4">:
+1. Membuat footer ber-background gelap (bg-dark), teks putih (text-white), padding (p-3), dan margin atas (mt-4).
+2. Menampilkan teks hak cipta (© Tahun Sekarang Flash Electric) menggunakan fungsi PHP date('Y') agar tahun selalu update otomatis.
+
+
+Script JavaScript:
+jQuery:
+1. Memuat jQuery dari CDN untuk memudahkan manipulasi DOM dan penggunaan plugin.
+
+Bootstrap Bundle:
+1. Memuat file JavaScript Bootstrap beserta Popper.js untuk mendukung fitur interaktif seperti modal, dropdown, dsb.
+
+DataTables:
+1. Memuat plugin DataTables (jquery.dataTables.min.js) untuk membuat tabel menjadi lebih interaktif.
+2. Memuat integrasi DataTables dengan Bootstrap 5 (dataTables.bootstrap5.min.js) agar tampilan tabel konsisten dengan tema Bootstrap.
+
+
+
+Inisialisasi dan Event Handling (<script>):
+
+$(document).ready():
+Menjalankan semua kode JavaScript setelah halaman dimuat penuh.
+
+$('#productsTable').DataTable({...}):
+
+Mengubah tabel dengan ID productsTable menjadi tabel interaktif DataTables.
+
+Mengaktifkan scroll horizontal (scrollX: true) untuk tabel lebar.
+
+Menonaktifkan auto width (autoWidth: false) agar kolom bisa diatur manual.
+
+Mengkustomisasi tampilan kolom pencarian.
+
+
+$('#selectAll').click(...):
+
+Menandai atau menghapus tanda semua checkbox produk ketika checkbox utama selectAll diklik.
+
+
+$('#deleteSelected').click(...):
+
+Mengumpulkan semua ID produk yang dicentang.
+
+Menampilkan konfirmasi penghapusan jika ada produk yang dipilih.
+
+Jika dikonfirmasi, akan redirect ke delete.php dengan membawa daftar ID produk yang dipilih dalam URL (ids).
+
+
+
+</body> dan </html>:
+1. Menutup tag <body> dan <html>, mengakhiri dokumen HTML.

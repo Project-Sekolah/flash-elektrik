@@ -1,0 +1,38 @@
+A. Memuat konfigurasi database:
+1. config.php di-require untuk koneksi database dan fungsi bantu (seperti sanitize).
+
+B. Cek metode request:
+1. Mengecek jika form dikirim menggunakan metode POST.
+
+C. Ambil dan bersihkan input form:
+1. Data nama_barang, description, harga, tipe, dan stock diambil dari form lalu dibersihkan dengan fungsi sanitize().
+
+D. Proses upload gambar:
+1. Cek apakah ada file gambar yang diupload dan validasi tidak ada error saat upload.
+2. Tentukan folder penyimpanan (assets/images/) dan buat folder jika belum ada.
+3. Validasi ekstensi file hanya boleh jpg, jpeg, png, atau gif.
+4. Simpan file dengan nama unik jika valid.
+
+E. Simpan data ke database:
+1. Menyusun query INSERT INTO products untuk menyimpan data produk baru termasuk nama file gambar (jika ada).
+2. Jalankan query dan jika berhasil, redirect ke dashboard.php.
+
+F.Tangani error:
+1. Jika gagal menyimpan ke database, simpan pesan error ke variabel $error.
+
+G. Tampilkan halaman:
+1. Menyisipkan header.php untuk bagian atas halaman.
+2. Menampilkan pesan error jika ada.
+3. Menampilkan form input produk baru:
+4. Input teks untuk nama barang.
+5. Textarea untuk deskripsi.
+6. Input angka untuk harga.
+7. Dropdown untuk tipe produk (perabotan, Laptop, Hp).
+8. Input angka untuk stok.
+9. Upload file untuk gambar.
+10. Tombol Simpan untuk submit dan Batal untuk kembali ke dashboard.
+
+
+
+Menyisipkan footer.php:
+1. Untuk menutup bagian bawah halaman.

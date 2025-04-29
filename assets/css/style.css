@@ -1,0 +1,146 @@
+/* ======= GENERAL STYLING ======= */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Gunakan font yang bersih dan modern */
+    background-color: #f8f9fa; /* Warna latar belakang yang netral dan ringan */
+}
+
+/* Header dengan gradasi warna */
+.gradient-header {
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+    color: white;
+}
+
+/* Efek hover pada tombol */
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul dan ikon */
+.brand-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Styling untuk foto/ikon item */
+.photo-thumb {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.table img {
+    max-width: 100px; /* Batasi lebar maksimum gambar dalam tabel */
+    height: auto; /* Pertahankan rasio aspek gambar */
+    border-radius: 5px; /* Tambahkan sudut membulat agar terlihat lebih halus */
+}
+
+footer {
+    margin-top: 2rem; /* Beri jarak atas pada footer agar tidak menempel pada konten */
+}
+
+.table td,
+.table th {
+    vertical-align: middle; /* Vertikal tengah untuk konten tabel agar sejajar rapi */
+}
+
+/* ======= RESPONSIVE STYLING UNTUK PERANGKAT KECIL ======= */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Perkecil ukuran judul pada perangkat kecil */
+    }
+
+    .btn {
+        width: 100%; /* Buat tombol memenuhi lebar layar di perangkat kecil */
+    }
+
+    .table-responsive {
+        overflow-x: auto; /* Tambahkan scroll horizontal untuk tabel di layar kecil */
+    }
+
+    .table td,
+    .table th {
+        white-space: nowrap; /* Hindari pemenggalan teks agar tidak pecah di baris baru */
+    }
+
+    .btn-sm {
+        font-size: 0.875rem; /* Ukuran font untuk tombol kecil */
+    }
+}
+
+/* ======= CUSTOM STYLING UNTUK DATATABLES (FILTER, PAGINATION, DLL) ======= */
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    margin-bottom: 1rem; /* Spasi antar elemen kontrol datatables */
+}
+
+.dataTables_wrapper .dataTables_filter {
+    text-align: right; /* Letakkan input pencarian ke kanan */
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_info {
+    float: left; /* Letakkan informasi panjang data dan info ke kiri */
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: right; /* Letakkan kontrol halaman di sebelah kanan */
+}
+
+/* ======= RESPONSIF UNTUK DATATABLES KETIKA DI LAYAR KECIL ======= */
+@media (max-width: 768px) {
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_info,
+    .dataTables_wrapper .dataTables_paginate {
+        float: none !important; /* Hapus float agar bisa ditampilkan secara vertikal */
+        text-align: center !important; /* Teks dan elemen di tengah layar */
+        margin: 0.5rem 0; /* Beri sedikit jarak antar elemen */
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+        width: 100%; /* Input pencarian mengisi seluruh lebar */
+        max-width: 300px; /* Batasi lebar maksimum agar tidak terlalu lebar */
+        margin: 0 auto; /* Tengah secara horizontal */
+    }
+
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        margin: 0 2px; /* Spasi antar tombol pagination */
+    }
+}
+
+/* ======= STYLING UNTUK TOMBOL PAGINATION ======= */
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 0.25rem; /* Sudut membulat pada tombol pagination */
+    color: #212529; /* Warna teks tombol default */
+    font-size: 0.875rem; /* Ukuran font tombol pagination */
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #0d6efd; /* Warna latar belakang tombol aktif */
+    color: #fff !important; /* Warna teks putih untuk tombol aktif */
+}
+
+/* ======= HOVER EFFECTS ======= */
+
+/* Efek hover untuk tombol pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #0b5ed7; /* Warna lebih gelap dari tombol aktif */
+    color: #fff !important; /* Warna teks putih saat hover */
+    cursor: pointer;
+}
+
+/* Efek hover untuk tombol umum */
+.btn:hover {
+    opacity: 0.9; /* Sedikit transparan saat hover */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Efek hover untuk tombol kecil */
+.btn-sm:hover {
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out;
+}

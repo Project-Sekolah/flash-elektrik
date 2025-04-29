@@ -1,0 +1,98 @@
+Memuat konfigurasi database:
+
+Meng-require config.php untuk koneksi database dan fungsi bantu.
+
+
+Cek keberadaan parameter id:
+
+Jika tidak ada id di URL ($_GET['id']), langsung redirect ke dashboard.php.
+
+
+Ambil id produk dan sanitasi:
+
+sanitize() digunakan untuk mencegah SQL Injection atau XSS dari parameter URL.
+
+
+Jika form dikirim dengan POST:
+
+Ambil dan bersihkan semua data form (nama_barang, description, harga, tipe, stock).
+
+Proses upload gambar:
+
+Secara default, gunakan gambar lama (existing_gambar).
+
+Jika ada file baru diupload:
+
+Validasi ekstensi file (jpg, jpeg, png, gif).
+
+Simpan file dengan nama unik.
+
+Hapus file gambar lama jika ada.
+
+Update nama file gambar ke yang baru.
+
+
+
+
+Update data produk:
+
+Menyusun query UPDATE products berdasarkan id.
+
+Menjalankan query dan redirect ke dashboard.php jika berhasil.
+
+
+Menangani error:
+
+Jika query gagal, simpan pesan error di $error.
+
+
+Ambil data produk untuk diedit:
+
+Query SELECT * FROM products WHERE id = $id.
+
+Jika produk tidak ditemukan, redirect ke dashboard.php.
+
+
+
+
+---
+
+Bagian tampilan halaman:
+
+Include header:
+
+Menyisipkan header.php untuk tampilan awal.
+
+
+Judul halaman:
+
+Menampilkan judul Edit Produk.
+
+
+Tampilkan pesan error:
+
+Jika $error ada, tampilkan dalam alert merah.
+
+
+Form edit produk:
+
+Isi form sudah terisi nilai produk yang sudah ada (value="<?= $product[...] ?>").
+
+Tipe produk otomatis memilih opsi yang sesuai.
+
+Jika ada gambar lama, tampilkan gambar saat ini.
+
+Hidden input existing_gambar dipakai untuk mempertahankan gambar lama kalau tidak upload gambar baru.
+
+
+Tombol aksi:
+
+Tombol Simpan Perubahan untuk submit form.
+
+Tombol Batal kembali ke dashboard.php.
+
+
+Include footer:
+
+Menyisipkan footer.php untuk tampilan akhir.
+

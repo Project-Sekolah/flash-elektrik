@@ -1,0 +1,32 @@
+A. Konfigurasi koneksi database:
+1. Menentukan host, username, password, dan nama database MySQL.
+2. Aktifkan pelaporan error MySQL:
+3. Menggunakan mysqli_report untuk menampilkan error query secara eksplisit.
+
+B. Membuat koneksi ke MySQL:
+1. Membuka koneksi ke server MySQL tanpa memilih database dulu.
+
+C. Cek koneksi:
+1. Jika gagal terhubung, hentikan program dan tampilkan pesan error.
+
+D. Set karakter encoding:
+1. Mengatur charset koneksi ke utf8mb4 agar mendukung karakter spesial dan emoji.
+
+E. Buat database jika belum ada:
+1. Menjalankan query CREATE DATABASE IF NOT EXISTS untuk membuat database.
+
+F. Pilih database:
+1. Menggunakan select_db untuk memilih database yang akan digunakan.
+
+G.Buat tabel products jika belum ada:
+1. Tabel berisi kolom: id, nama_barang, description, harga, tipe, stock, gambar, created_at, dan updated_at.
+2. created_at otomatis mencatat waktu pembuatan, updated_at otomatis update saat perubahan.
+
+H. Gunakan InnoDB dan utf8mb4:
+1. Tabel menggunakan engine InnoDB dan karakter set utf8mb4 untuk kompatibilitas luas.
+
+I. Fungsi sanitize($data):
+1. Membersihkan input pengguna dengan:
+2. Escape karakter khusus SQL.
+3. Hapus tag HTML.
+4. Konversi karakter khusus menjadi entitas HTML.

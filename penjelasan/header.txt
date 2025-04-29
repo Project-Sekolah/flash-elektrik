@@ -1,0 +1,64 @@
+Penjelasan Poin-Poin:
+
+<!DOCTYPE html>:
+Mendefinisikan dokumen ini sebagai HTML5.
+
+<html lang="en">:
+Menentukan bahasa dokumen sebagai bahasa Inggris.
+
+<head> bagian:
+
+<meta charset="UTF-8">:
+Set karakter encoding menjadi UTF-8 (mendukung semua karakter internasional).
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">:
+Membuat tampilan responsif di perangkat mobile.
+
+<title>Flash Electric - Electronic Sales</title>:
+Menentukan judul halaman browser.
+
+Bootstrap 5 CSS:
+Mengimpor CSS Bootstrap dari CDN untuk styling komponen dengan cepat.
+
+Bootstrap Icons:
+Mengimpor ikon-ikon Bootstrap untuk digunakan di halaman.
+
+DataTables CSS:
+Mengimpor plugin DataTables untuk membuat tabel menjadi interaktif.
+
+<link rel="stylesheet" href="assets/css/style.css">:
+Memuat file CSS kustom dari folder assets/css/ untuk gaya tambahan.
+
+
+<body> bagian:
+
+Header (<header>):
+
+Class gradient-header p-3 shadow-sm:
+Memberikan background gradasi, padding, dan bayangan di header.
+
+Container (<div class="container d-flex justify-content-between align-items-center">):
+
+Layout fleksibel menggunakan Flexbox (d-flex), isi tersebar (justify-content-between) dan sejajar vertikal (align-items-center).
+
+
+Brand Title:
+
+Ada ikon petir (bi-lightning-charge-fill) diikuti teks "Flash Electric" sebagai nama brand.
+
+
+Navigasi:
+
+Link ke dashboard.php (tombol home ikon rumah).
+
+Link ke create.php (tombol tambah barang dengan ikon plus).
+
+Kedua tombol menggunakan kombinasi btn, btn-light, atau btn-outline-light untuk style tombol Bootstrap.
+
+
+
+Main (<main class="container my-5">):
+
+Section utama halaman.
+
+Class container untuk pembatas layout, dan my-5 untuk margin vertikal atas dan bawah.

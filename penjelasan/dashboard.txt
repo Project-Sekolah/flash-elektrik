@@ -1,0 +1,75 @@
+
+Penjelasan Poin-Poin:
+
+require_once 'config.php':
+Mengimpor file konfigurasi untuk koneksi database.
+
+include 'header.php':
+Memuat bagian header halaman (seperti navigasi atau layout atas).
+
+Memuat Bootstrap Icons:
+Link CDN untuk menggunakan ikon-ikon Bootstrap di halaman.
+
+Judul Halaman:
+Menampilkan judul "Daftar Produk" dengan ikon box-seam-fill.
+
+Form #productsForm:
+Membungkus seluruh tabel produk dan tombol "Hapus Terpilih".
+
+Tombol "Hapus Terpilih":
+Tombol untuk menghapus banyak produk yang dipilih, namun belum ada fungsi JavaScript-nya.
+
+Tabel Produk:
+
+Responsive (table-responsive).
+
+Menggunakan Bootstrap table: striping, border, hover, dan lebar penuh (w-100).
+
+Kolom tabel:
+
+Checkbox pilih semua (#selectAll).
+
+Nomor urut.
+
+Nama barang.
+
+Deskripsi (dipotong maksimal 50 karakter).
+
+Tipe produk.
+
+Stok barang.
+
+Harga dalam format Rupiah.
+
+Gambar produk (atau teks "No Image" jika tidak ada gambar).
+
+Aksi (tombol Edit dan Hapus).
+
+
+
+Menampilkan Produk dari Database:
+
+Query: SELECT * FROM products ORDER BY id DESC.
+
+Menampilkan produk dalam urutan terbaru (id terbesar ke kecil).
+
+
+Checkbox Per Produk:
+Masing-masing produk memiliki checkbox untuk dipilih (class product-checkbox).
+
+Tombol Edit:
+
+Link ke update.php?id=....
+
+Untuk mengedit data produk.
+
+
+Tombol Hapus:
+
+Link ke delete.php?id=....
+
+Ada konfirmasi confirm('Yakin ingin menghapus?') sebelum dihapus.
+
+
+require_once 'footer.php':
+Menyisipkan bagian footer halaman.
