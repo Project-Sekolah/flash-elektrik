@@ -1,9 +1,9 @@
 <?php
 // Konfigurasi koneksi ke database MySQL
-$host = "127.0.0.1"; // Host dan port MySQL
+$host = "mysql.railway.internal"; // Host dan port MySQL
 $user = "root"; // Username untuk mengakses MySQL
-$pass = ""; // Password untuk mengakses MySQL (kosongkan jika tidak ada)
-$dbname = "flash_electric"; // Nama database yang akan digunakan
+$pass = "LoPfboGPzQMVbrMJsCWByXOEjbaLLssl"; // Password untuk mengakses MySQL (kosongkan jika tidak ada)
+$dbname = "railway"; // Nama database yang akan digunakan
 
 // Aktifkan pelaporan kesalahan agar mudah mendeteksi error pada query MySQL
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
